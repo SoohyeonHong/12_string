@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	
+	/*
 	#02
 	
 	int i=0;
@@ -34,6 +33,32 @@ int main(int argc, char *argv[]) {
 	char str[30] ="happy C programming";
 	printf("string \"%s\" 의 길이: %i\n", str, strlen(str));
 	
+	*/
+	#05
+	int i;
+	char input[100];
+	FILE* fp;
+	
+	fp=fopen("sample.txt","w");
+	for(i=0;i<3;i++)
+	{
+		printf("input a word :");
+		scanf("%s", input);
+		fprintf(fp,"%s\n",input);
+	}
+
+	fclose(fp);
+	
+	#06
+	
+	FILE *fp = NULL;
+	char c;
+	fp = fopen("sample.txt","r");
+	if (fp == NULL)
+		printf("파일을 못열음\n");
+	while ((c=fgetc(fp)) != EOF)
+		putchar(c);
+	fclose(fp);
 	
 	return 0;
 }
