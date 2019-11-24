@@ -3,7 +3,7 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	/*
+	
 	#02
 	
 	int i=0;
@@ -31,9 +31,15 @@ int main(int argc, char *argv[]) {
 	#04
 	
 	char str[30] ="happy C programming";
-	printf("string \"%s\" ÀÇ ±æÀÌ: %i\n", str, strlen(str));
+	printf("string \"%s\" ì˜ ê¸¸ì´: %i\n", str, strlen(str));
 	
-	*/
+	
+	#05
+	int i;
+	char input[100];
+	FILE* fp;
+	
+	
 	#05
 	int i;
 	char input[100];
@@ -55,7 +61,7 @@ int main(int argc, char *argv[]) {
 	char c;
 	fp = fopen("sample.txt","r");
 	if (fp == NULL)
-		printf("ÆÄÀÏÀ» ¸ø¿­À½\n");
+		printf("íŒŒì¼ì„ ëª»ì—´ìŒ\n");
 	while ((c=fgetc(fp)) != EOF)
 		putchar(c);
 	fclose(fp);
